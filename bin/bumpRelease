@@ -1,0 +1,42 @@
+#!/usr/bin/env php
+<?php
+(PHP_SAPI === 'cli') or die("Please run this script using the cli sapi");
+
+require_once __DIR__ . "/../include/branches.inc";
+require_once __DIR__ . "/../include/version.inc";
+require_once __DIR__ . "/../include/releases.inc";
+
+if ($_SERVER['argc'] < 1) {
+	fwrite(STDERR, "Usage: {$_SERVER['argv'][0]} major_version [ minor_version ]\n");
+	exit(1);
+}
+
+$major = (int) $_SERVER['argv'][1];
+isset($RELEASES[$major]) or die("Unknown major version $major");
+$minor = isset($_SERVER['argv'][2]) ? (int) $_SERVER['argv'][2] : null;
+
+$version = get_current_release_for_branch($major, $minor);
+$info = $RELEASES[$major][$version] ?? null;
+
+if ($info === null) {
+	fwrite(STDERR, "Unable to find a current PHP release for {$major}.{$minor}\n");
+	exit(1);
+}
+
+$info["museum"] = false;
+if ($info["announcement"] === true) {
+	$info["announcement"] = array("English" => "/releases/" . str_replace(".", "_", $version) . ".php");
+}
+
+$OLDRELEASES[$major] = array_merge(
+	array($version => $info),
+	$OLDRELEASES[$major] ?? []
+);
+
+file_put_contents(__DIR__ . "/../include/releases.inc", [
+	"<?php\n\$OLDRELEASES = ",
+	var_export($OLDRELEASES, true),
+	";\n",
+]);
+
+echo "This was fun \o/\nI hope you remembered to run this script *before* updating include/version.inc... :)\n";

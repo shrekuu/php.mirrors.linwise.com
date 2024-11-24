@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+  <title>PHPBenelux Conference 2017 CfP Opened</title>
+  <id>http://php.net/archive/2016.php#id2016-09-06-1</id>
+  <published>2016-09-06T01:53:15+02:00</published>
+  <updated>2016-09-06T01:53:15+02:00</updated>
+  <default:finalTeaserDate xmlns="http://php.net/ns/news">2016-10-02</default:finalTeaserDate>
+  <category term="cfp" label="Call for Papers"/>
+  <link href="http://php.net/conferences/index.php#id2016-09-06-1" rel="alternate" type="text/html"/>
+  <default:newsImage xmlns="http://php.net/ns/news" link="https://cfp.phpbenelux.eu/" title="PHPBenelux Conference 2017">phpbenelux_conference_logo_2017.png</default:newsImage>
+  <link href="https://cfp.phpbenelux.eu/" rel="via" type="text/html"/>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <p>
+         PHPBenelux Conference 2017 is an annual PHP oriented conference in Antwerp, Belgium and will take place on Friday, January 27 and Saturday, January 28 2017. We offer two days of stellar tutorials and talks, epic social events and a lineup of the best local and international businesses involved with PHP.
+      </p>
+      <p>
+         We like to invite speakers to submit their tutorials and talks at <a href="https://cfp.phpbenelux.eu/?utm_source=php_net&amp;utm_medium=announcement&amp;utm_term=phpbnl17%2Bcfp&amp;utm_content=textlink&amp;utm_campaign=phpbnl17_cfp">PHPBenelux CFP</a>. Follow us on <a href="https://twitter.com/phpbenelux">Twitter</a> or like us on <a href="https://www.facebook.com/PHPBenelux-194314644038733/">Facebook</a> to stay updated with news from the PHPBenelux crew.
+      </p>
+    </div>
+  </content>
+</entry>
