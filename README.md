@@ -1,3 +1,18 @@
+# php.net website mirror
+
+* website: https://php.mirrors.linwise.com
+* This repository is a temporary mirror of the official php.net website.
+* When php.net is down, I can still read the docs on my own mirror.
+* When php.net is NOT down, you should read the docs on the official website, because the mirror may not be up-to-date.
+
+## TODO
+
+- [ ] Deploy another simple app to use the latest code to redeploy the website, once php.net is not available for 10 minutes.
+
+---
+
+# Original README.md content:
+
 [![Integrate](https://github.com/php/web-php/actions/workflows/integrate.yaml/badge.svg)](https://github.com/php/web-php/actions/workflows/integrate.yaml)
 
 ## Local development
